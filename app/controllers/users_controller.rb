@@ -18,6 +18,8 @@ class UsersController < ApplicationController
     else
       # if user is not saved
       # re-render :new if validations don't pass
+      flash.now[:errors] = @user.errros.full_messages.join(", ")
+      render :new
     end
     #when a user creates an account they should automatically
     #be logged in, so we keep track of the user_id in a session

@@ -8,7 +8,7 @@ feature "User Logs In To Account", type: :feature do
     
     fill_in "Username", with: user.username
     fill_in "Password", with: "bambam"
-    click_on "Login"
+    click_button "Login"
 
     expect(page).to have_content("Bobo")
     # reset_session!
