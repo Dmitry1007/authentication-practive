@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-      # byebug
     @user = User.find_by(username: params[:session][:username])
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
@@ -11,5 +10,10 @@ class SessionsController < ApplicationController
     else
       # either user doesn't exist or password is incorrect
     end
+  end
+
+  def destroy
+    session.clear  # or session[:user_id] = nil
+    redirect_to login_path
   end
 end
