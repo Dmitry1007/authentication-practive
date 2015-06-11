@@ -1,0 +1,1 @@
+[![Stories in Ready](https://badge.waffle.io/Dmitry1007/authentication-practive.svg?label=ready&title=Ready)](http://waffle.io/Dmitry1007/authentication-practive)
