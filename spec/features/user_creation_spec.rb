@@ -12,4 +12,3 @@ feature "User Creates Account", type: :feature do
     # reset_session!
   end
 end
-

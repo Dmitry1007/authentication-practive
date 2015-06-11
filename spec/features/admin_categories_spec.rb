@@ -17,7 +17,7 @@ feature "Admin Categories", type: :feature do
                        password: "password", 
                        role: 0)
 
-    # save_and_page
+    # save_and_open_page
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit admin_categories_path
